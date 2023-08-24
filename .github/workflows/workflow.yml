@@ -43,8 +43,12 @@ jobs:
       - name: check dir
         run: ls
         
-      - name: pytest
-        run: pytest 
+      - name: Instalacion
+        run: |
+          pip install virtualenv
+          virtualenv env
+          source env/bin/activate
+          pytest test_pagina.py
         
       
         
