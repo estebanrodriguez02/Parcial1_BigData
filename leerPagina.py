@@ -27,7 +27,7 @@ def obtener_html():
     html_publimetro = get_html(get_url_publimetro())
     s3 = get_boto()
     s3.put_object(Body=html_tiempo,
-                  Bucket='parcial1bigdata',
+                  Bucket='parcial1bd',
                   Key="news/raw/eltiempo-"+str(fecha_actual)+".html")
 
 

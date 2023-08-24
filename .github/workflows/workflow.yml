@@ -42,5 +42,11 @@ jobs:
           echo test, and deploy your project.
       - name: check dir
         run: ls
+        
+      - name: pytest
+        run: pytest 
+        
+      
+        
 
         
