@@ -43,10 +43,4 @@ jobs:
       - name: check dir
         run: ls
 
-      - name: instalacion entorno virtual y pruebas
-        run: |
-          pip install virtualenv
-          virtualenv env
-          source env/bin/activate
-          pip install -r requirements.txt
         
