@@ -11,7 +11,7 @@
         "s3_bucket": "parcial1bigdata",
         "events": [{
            "function": "leerPagina.obtener_html", 
-           "expression": "cron(15 17 * * ? *)" 
+           "expression": "cron(25 17 * * ? *)" 
        }]
     },
     
@@ -28,7 +28,7 @@
         "events": [{
             "function": "recibirPagina.pagina",
             "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1bd",
+                  "arn":  "arn:aws:s3:::parcial1bigdata",
                   "events": [
                     "s3:ObjectCreated:*" 
                   ]
