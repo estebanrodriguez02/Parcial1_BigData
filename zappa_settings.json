@@ -11,7 +11,7 @@
         "s3_bucket": "parcial1bd",
         "events": [{
            "function": "leerPagina.obtener_html", 
-           "expression": "cron(22 16 * * ? *)" 
+           "expression": "cron(28 16 * * ? *)" 
        }]
     },
     
