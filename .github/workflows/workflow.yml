@@ -61,6 +61,7 @@ jobs:
 
       - name: Zappa
         run: |
+          pip install zappa --upgrade
           source env/bin/activate
           pytest
           zappa update dev
