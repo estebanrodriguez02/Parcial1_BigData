@@ -15,15 +15,15 @@ def pagina():
     html_tiempo = BeautifulSoup(body_tiempo, 'html.parser')
     data_noticias_tiempo = html_tiempo.find_all('article')
     csv_tiempo = ""
-    linea_0 = "Nombre, Categoria, Link\n"
+    linea_0 = "Nombre; Categoria; Link\n"
     for i in range(len(data_noticias_tiempo)):
         link = "eltiempo.com" + \
                data_noticias_tiempo[i].find('a',
                                             class_='title page-link')['href']
         name = data_noticias_tiempo[i]['data-name'].replace(",", "")
         category = data_noticias_tiempo[i]['data-seccion']
-        csv_tiempo += linea_0 + name + "," + \
-            category + "," + \
+        csv_tiempo += linea_0 + name + ";" + \
+            category + ";" + \
             link + \
             "\n"
 
