@@ -2,7 +2,6 @@ import boto3
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-
 def pagina():
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
     s3 = boto3.resource('s3')
@@ -34,7 +33,4 @@ def pagina():
                                           nombre[:4]+'/month=' +
                                           nombre[5:7]+'/day=' +
                                           nombre[8:]+'/eltiempo.csv'))
-
-                                          
-                                          
 pagina()
