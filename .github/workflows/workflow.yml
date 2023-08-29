@@ -46,7 +46,7 @@ jobs:
           pip install virtualenv
           virtualenv env
           source env/bin/activate
-          pytest test_pagina.py
+          pytest
         
       
         
