@@ -34,7 +34,7 @@ jobs:
         run: |
           ls
           pwd
-          
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -64,6 +64,7 @@ jobs:
           pip install zappa --upgrade
           source env/bin/activate
           pytest
+          python pruebaZappa.py
           zappa update dev
           zappa update dev2
           
