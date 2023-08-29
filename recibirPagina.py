@@ -22,7 +22,7 @@ def pagina():
                                             class_='title page-link')['href']
         name = data_noticias_tiempo[i]['data-name'].replace(",", "")
         category = data_noticias_tiempo[i]['data-seccion']
-        csv_tiempo += linea_0 + name + ";" + \
+        csv_tiempo += name + ";" + \
             category + ";" + \
             link + \
             "\n"
