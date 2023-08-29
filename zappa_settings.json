@@ -11,7 +11,7 @@
         "s3_bucket": "parcial1bigdata",
         "events": [{
            "function": "leerPagina.obtener_html", 
-           "expression": "cron(25 17 * * ? *)" 
+           "expression": "cron(33 17 * * ? *)" 
        }]
     },
     
