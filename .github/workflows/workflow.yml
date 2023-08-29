@@ -65,7 +65,8 @@ jobs:
           pytest
           zappa update dev
           zappa update dev2
-          
+        # zappa deploy dev
+        # zappa deploy dev2
           
         
       
