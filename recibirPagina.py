@@ -16,8 +16,7 @@ def pagina():
     data_noticias_tiempo = html_tiempo.find_all('article')
     csv_tiempo = ""
     linea_0 = "Nombre; Categoria; Link\n"
-    for i in range(len(data_noticias_tiempo)):
-        link = "eltiempo.com" + \
+    link = "eltiempo.com" + \
                data_noticias_tiempo[i].find('a',
                                             class_='title page-link')['href']
         name = data_noticias_tiempo[i]['data-name'].replace(",", "")
