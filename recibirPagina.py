@@ -48,6 +48,15 @@ def pagina():
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
     s3 = boto3.resource('s3')
     bucket = s3.Bucket('parcial1bigdata')
+    bucket_name = 'parcial1bigdata'
+    
+    # Check if a CSV file exists in the bucket
+    existing_objects = s3.meta.client.list_objects_v2(Bucket=bucket_name, Prefix='headlines/final/')
+    for obj in existing_objects.get('Contents', []):
+        if obj['Key'].endswith('-eltiempo.csv'):
+            s3.Object(bucket_name, obj['Key']).delete()
+
+    
     obj_tiempo = bucket.Object(str("news/raw/" +
                                    "eltiempo-" + nombre +
                                    ".html"))
