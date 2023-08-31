@@ -6,12 +6,12 @@
         "manage_roles": false,
         "apigateway_enabled": false,
         "aws_region": "us-east-1",
-        "project_name": "parcial1_lambda1",
+        "project_name": "parcial1",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1bigdata",
+        "s3_bucket": "parcial1lambda1",
         "events": [{
-           "function": "leerPagina.obtener_html", 
-           "expression": "cron(38 19 * * ? *)" 
+           "function": "leer.obtener_html", 
+           "expression": "cron(55 16 * * ? *)" 
        }]
     },
     
@@ -22,13 +22,13 @@
         "manage_roles": false,
         "apigateway_enabled": false,
         "aws_region": "us-east-1",
-        "project_name": "parcial1_lambda2",
+        "project_name": "parcial1",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1bigdata",
+        "s3_bucket": "parcial1lambda2",
         "events": [{
-            "function": "recibirPagina.pagina",
+            "function": "recibir.pagina",
             "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1bigdata",
+                  "arn":  "arn:aws:s3:::parcial1lambda2",
                   "events": [
                     "s3:ObjectCreated:*" 
                   ]

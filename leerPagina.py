@@ -26,8 +26,6 @@ def obtener_html():
     html_tiempo = get_html(get_url_tiempo())
     s3 = get_boto()
     s3.put_object(Body=html_tiempo,
-                  Bucket='parcial1bigdata',
+                  Bucket='parcial1lambda1',
                   Key="news/raw/eltiempo-"+str(fecha_actual)+".html")
 
-
-obtener_html()
