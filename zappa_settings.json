@@ -10,8 +10,8 @@
         "runtime": "python3.8",
         "s3_bucket": "parcial1lambda1",
         "events": [{
-           "function": "leer.obtener_html", 
-           "expression": "cron(46 14 * * ? *)" 
+           "function": "leerPagina.obtener_html", 
+           "expression": "cron(56 14 * * ? *)" 
        }]
     },
     
