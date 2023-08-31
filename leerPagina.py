@@ -29,4 +29,4 @@ def obtener_html():
                   Bucket='parcial1lambda1',
                   Key="news/raw/eltiempo-"+str(fecha_actual)+".html")
     
- obtener_html()
+obtener_html()
