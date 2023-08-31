@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 def pagina():
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
     s3 = boto3.resource('s3')
-    bucket = s3.Bucket('parcial1lambda2')
+    bucket = s3.Bucket('parcial1lambda1')
     obj_tiempo = bucket.Object(str("news/raw/" +
                                    "eltiempo-" + nombre +
                                    ".html"))
