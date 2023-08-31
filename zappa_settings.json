@@ -8,7 +8,7 @@
         "aws_region": "us-east-1",
         "project_name": "parcial1",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1lambda1",
+        "s3_bucket": "parcial1bdf1",
         "events": [{
            "function": "leerPagina.obtener_html", 
            "expression": "cron(20 15 * * ? *)" 
@@ -24,11 +24,11 @@
         "aws_region": "us-east-1",
         "project_name": "parcial1",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1lambda2",
+        "s3_bucket": "parcial1bdf2",
         "events": [{
             "function": "recibirPagina.pagina",
             "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1lambda2",
+                  "arn":  "arn:aws:s3:::parcial1bdf2",
                   "events": [
                     "s3:ObjectCreated:*" 
                   ]
