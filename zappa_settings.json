@@ -11,7 +11,7 @@
         "s3_bucket": "parcial1lambda1",
         "events": [{
            "function": "leer.obtener_html", 
-           "expression": "cron(38 14 * * ? *)" 
+           "expression": "cron(46 14 * * ? *)" 
        }]
     },
     
@@ -26,7 +26,7 @@
         "runtime": "python3.8",
         "s3_bucket": "parcial1lambda2",
         "events": [{
-            "function": "recibir.pagina",
+            "function": "recibirPagina.pagina",
             "event_source": {
                   "arn":  "arn:aws:s3:::parcial1lambda2",
                   "events": [
