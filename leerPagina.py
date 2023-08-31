@@ -28,4 +28,3 @@ def obtener_html():
     s3.put_object(Body=html_tiempo,
                   Bucket='parcial1lambda1',
                   Key="news/raw/eltiempo-"+str(fecha_actual)+".html")
-
