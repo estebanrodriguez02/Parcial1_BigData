@@ -15,7 +15,6 @@ def pagina():
     html_tiempo = BeautifulSoup(body_tiempo, 'html.parser')
     data_noticias_tiempo = html_tiempo.find_all('article')
     csv_tiempo = ""
-    
     for i in range(len(data_noticias_tiempo)):
         link = "eltiempo.com" + \
                data_noticias_tiempo[i].find('a',
