@@ -2,21 +2,9 @@ import boto3
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+primer_titular = ""
 def get_titularNoticias():
-    nombre = str(datetime.today().strftime('%Y-%m-%d'))
-    # URL de la página "eltiempo.com"
-    url = "https://www.eltiempo.com/"
-    # Realizar una solicitud GET a la página
-    response = requests.get(url)
-    html_tiempo = BeautifulSoup(response.text, 'html.parser')
-    data_noticias_tiempo = html_tiempo.find_all('article')
-    if data_noticias_tiempo:
-        # Si se encontraron noticias, obtener el título de la primera noticia
-        primera_noticia = data_noticias_tiempo[0]
-        name = primera_noticia['data-name'].replace(",", "")
-        return name
-    else:
-        return "No se encontraron noticias en eltiempo.com"
+    return primer_titular
 
 def pagina():
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
@@ -28,6 +16,7 @@ def pagina():
     body_tiempo = obj_tiempo.get()['Body'].read()
 
     html_tiempo = BeautifulSoup(body_tiempo, 'html.parser')
+    primer_titular = html_tiempo.find('a', class_='title page-link').text
     data_noticias_tiempo = html_tiempo.find_all('article')
     csv_tiempo = ""
     for i in range(len(data_noticias_tiempo)):
