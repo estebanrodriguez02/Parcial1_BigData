@@ -2,6 +2,7 @@ import boto3
 from datetime import datetime
 from bs4 import BeautifulSoup
 primer_titular = ""  # Declarar primer_titular como una variable global
+pagina()
 def pagina():
     global primer_titular  # Acceder a la variable global primer_titular
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
@@ -34,7 +35,6 @@ def pagina():
                                           nombre[:4]+'-month=' +
                                           nombre[5:7]+'-day=' +
                                           nombre[8:]+'-eltiempo.csv'))
-    pagina()
 
 def get_titularNoticias():
     global primer_titular  # Acceder a la variable global primer_titular
