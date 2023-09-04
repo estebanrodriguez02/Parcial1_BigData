@@ -1,8 +1,9 @@
 import boto3
 from datetime import datetime
 from bs4 import BeautifulSoup
-
+primer_titular = ""  # Declarar primer_titular como una variable global
 def pagina():
+    global primer_titular  # Acceder a la variable global primer_titular
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
     s3 = boto3.resource('s3')
     bucket = s3.Bucket('parcial1bdf1')
@@ -35,7 +36,7 @@ def pagina():
                                           nombre[8:]+'-eltiempo.csv'))
     pagina()
 
-primer_titular = ""
 def get_titularNoticias():
+    global primer_titular  # Acceder a la variable global primer_titular
     return primer_titular
 
