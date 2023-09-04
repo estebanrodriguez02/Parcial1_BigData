@@ -16,6 +16,7 @@ def test_get_titularNoticias():
     primer_titular = soup.find('a', class_='title page-link').text
     assert get == primer_titular
 
+
 def test_contenedoresHTML():
     # Realizar una solicitud GET a la página "eltiempo.com"
     url = get_url_tiempo()
@@ -30,4 +31,3 @@ def test_contenedoresHTML():
     # Verificar si hay al menos una etiqueta <p> en la página
     p_tags = html_tiempo.find_all('p')
     assert len(p_tags) > 0, "No se encontraron etiquetas <p> en la página"
-    
