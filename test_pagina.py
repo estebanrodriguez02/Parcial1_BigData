@@ -1,5 +1,6 @@
 from datetime import datetime
-from recibirPagina import get_titularNoticias, get_url_tiempo
+from recibirPagina import get_titularNoticias
+from leerPagina import get_url_tiempo
 import requests
 from bs4 import BeautifulSoup
 
