@@ -39,8 +39,6 @@ def pagina():
 
 pagina()
 
-
-
 def get_titularNoticias():
 
     global primer_titular  # Acceder a la variable global primer_titular
