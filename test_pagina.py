@@ -3,8 +3,9 @@ from leerPagina import get_url_tiempo
 import requests
 from bs4 import BeautifulSoup
 
+
 def test_get_titularNoticias():
-    
+
     get = get_titularNoticias()
     url = "https://www.eltiempo.com/"
     # Realizar una solicitud GET a la página
