@@ -36,9 +36,10 @@ def pagina():
                                           nombre[:4]+'-month=' +
                                           nombre[5:7]+'-day=' +
                                           nombre[8:]+'-eltiempo.csv'))
-    
+
 pagina()
-   
+
 def get_titularNoticias():
+    
     global primer_titular  # Acceder a la variable global primer_titular
     return primer_titular
