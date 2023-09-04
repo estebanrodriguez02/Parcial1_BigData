@@ -1,5 +1,5 @@
 # Parcial1_BigData
-ESTEBAN RODRIGUEZ - SANTIAGO NIÑO
+ESTEBAN RODRIGUEZ - SANTIAGO NIÑA
 
 1- Desarrollar un Pipeline de datos con AWS Lambda y Zappa para la descarga y
 procesamiento de información de los periódicos “eltiempo” y “el espectador”):
