@@ -61,6 +61,8 @@ jobs:
           
       - name: Zappa
         run: |
+          pip install virtualenv
+          virtualenv env
           source env/bin/activate
           zappa deploy dev
           zappa deploy dev2
