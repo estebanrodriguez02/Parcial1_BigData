@@ -59,14 +59,14 @@ jobs:
           flake8 recibirPagina.py
           flake8 test_pagina.py
 
-      # - name: Zappa
-      #   run: |
-      #     source env/bin/activate
-      #     pytest
-      #     zappa update devv
-      #     zappa update dev2
-      #   #zappa deploy dev
-      #   #zappa deploy dev2
+      - name: Zappa
+        run: |
+          source env/bin/activate
+          pytest
+          zappa deploy dev
+          zappa deploy dev2
+        #zappa deploy dev
+        #zappa deploy dev2
           
           
         
