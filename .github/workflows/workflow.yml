@@ -43,8 +43,8 @@ jobs:
             aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
             aws-region: us-east-1
 
-      - name: Instalacion
-        run: |
+      # - name: Instalacion
+      #   run: |
         # pip install pytest
           # pip install virtualenv
           # virtualenv env
@@ -52,8 +52,8 @@ jobs:
           # pip install -r requirements.txt
           # pytest
 
-      - name: flake8
-        run: |
+      # - name: flake8
+      #   run: |
         # source env/bin/activate
           # flake8 leerPagina.py
           # flake8 recibirPagina.py
